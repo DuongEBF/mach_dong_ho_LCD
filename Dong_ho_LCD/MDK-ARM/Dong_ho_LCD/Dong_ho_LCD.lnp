@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"dong_ho_lcd\startup_stm32f103xb.o"
+"dong_ho_lcd\main.o"
+"dong_ho_lcd\stm32f1xx_it.o"
+"dong_ho_lcd\stm32f1xx_hal_msp.o"
+"dong_ho_lcd\stm32f1xx_hal_gpio_ex.o"
+"dong_ho_lcd\stm32f1xx_hal_i2c.o"
+"dong_ho_lcd\stm32f1xx_hal.o"
+"dong_ho_lcd\stm32f1xx_hal_rcc.o"
+"dong_ho_lcd\stm32f1xx_hal_rcc_ex.o"
+"dong_ho_lcd\stm32f1xx_hal_gpio.o"
+"dong_ho_lcd\stm32f1xx_hal_dma.o"
+"dong_ho_lcd\stm32f1xx_hal_cortex.o"
+"dong_ho_lcd\stm32f1xx_hal_pwr.o"
+"dong_ho_lcd\stm32f1xx_hal_flash.o"
+"dong_ho_lcd\stm32f1xx_hal_flash_ex.o"
+"dong_ho_lcd\stm32f1xx_hal_exti.o"
+"dong_ho_lcd\stm32f1xx_hal_tim.o"
+"dong_ho_lcd\stm32f1xx_hal_tim_ex.o"
+"dong_ho_lcd\system_stm32f1xx.o"
+"dong_ho_lcd\liquidcrystal_i2c.o"
+"dong_ho_lcd\ds3231.o"
+"dong_ho_lcd\button.o"
+--strict --scatter "Dong_ho_LCD\Dong_ho_LCD.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Dong_ho_LCD.map" -o Dong_ho_LCD\Dong_ho_LCD.axf
