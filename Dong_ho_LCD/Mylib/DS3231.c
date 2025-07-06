@@ -59,3 +59,14 @@ uint8_t rtc_read_day_of_week(Date_time_t* dt)
 	uint8_t weekday  = (d += m < 3 ? y-- : y - 2, 23*m/9 + d + 4 + y/4- y/100 + y/400)%7;
 	return weekday;
 }
+void ds3231_write_ram(uint8_t address, uint8_t data)
+{
+	HAL_I2C_Mem_Write(ds_i2c1, RTC_ADDR, address, I2C_MEMADD_SIZE_8BIT, &data, 1, 100);
+}
+
+uint8_t ds3231_read_ram(uint8_t address)
+{
+	uint8_t data = 0;
+	HAL_I2C_Mem_Read(ds_i2c1, RTC_ADDR, address, I2C_MEMADD_SIZE_8BIT, &data, 1, 100);
+	return data;
+}
